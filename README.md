@@ -70,6 +70,10 @@ vim $(bazel info output_base)/external/local_config_cc/BUILD
  89 )
 ```
 
+```
+bazel clean --expunge
+```
+
 2. `ERROR: xxx/tensorflow/lite/python/BUILD:62:10 Middleman _middlemen/tensorflow_Slite_Spython_Stflite_Uconvert-runfiles failed: (Exit 1): bash failed: error executing command`
 
 
