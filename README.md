@@ -16,6 +16,11 @@ git checkout r2.8
 bazel build --config=macos_arm64 --config=dbg --local_ram_resources=200 --local_cpu_resources=10 --verbose_failures tensorflow/tools/pip_package:build_pip_package
 ```
 
+```
+生产wheel
+./bazel-bin/tensorflow/tools/pip_package/build_pip_package /tmp/tensorflow_pkg
+```
+
 #### Errors  
 
 1. `ERROR: xxx/external/local_config_cc/BUILD:48:19: in cc_toolchain_suite rule @local_config_cc//:toolchain: cc_toolchain_suite '@local_config_cc//:toolchain' does not contain a toolchain for cpu 'darwin_arm64'`
