@@ -20,9 +20,8 @@ bazel build --config=macos_arm64 --config=dbg --local_ram_resources=200 --local_
 生产wheel
 ./bazel-bin/tensorflow/tools/pip_package/build_pip_package /tmp/tensorflow_pkg
 ```
-
+#### 解决 error:Could not find a version that satisfies the requirement tensorflow-io-gcs-filesystem>=0.23.1 (from tensorflow) (from versions: none)
 ```
-解决error:Could not find a version that satisfies the requirement tensorflow-io-gcs-filesystem>=0.23.1 (from tensorflow) (from versions: none)
 git clone https://github.com/tensorflow/io.git
 cd io
 python setup.py -q bdist_wheel --project tensorflow_io_gcs_filesystem
