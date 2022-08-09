@@ -21,6 +21,16 @@ bazel build --config=macos_arm64 --config=dbg --local_ram_resources=200 --local_
 ./bazel-bin/tensorflow/tools/pip_package/build_pip_package /tmp/tensorflow_pkg
 ```
 
+```
+解决error:Could not find a version that satisfies the requirement tensorflow-io-gcs-filesystem>=0.23.1 (from tensorflow) (from versions: none)
+git clone https://github.com/tensorflow/io.git
+cd io
+python setup.py -q bdist_wheel --project tensorflow_io_gcs_filesystem
+pip install --no-deps dist/tensorflow_io_gcs_filesystem-0.25.0-cp39-cp39-macosx_12_0_arm64.whl
+python setup.py -q bdist_wheel
+pip install --no-deps dist/tensorflow_io-0.25.0-cp39-cp39-macosx_12_0_arm64.whl
+```
+
 #### Errors  
 
 1. `ERROR: xxx/external/local_config_cc/BUILD:48:19: in cc_toolchain_suite rule @local_config_cc//:toolchain: cc_toolchain_suite '@local_config_cc//:toolchain' does not contain a toolchain for cpu 'darwin_arm64'`
