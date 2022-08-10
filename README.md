@@ -34,6 +34,7 @@ pip install --no-deps dist/tensorflow_io-0.25.0-cp39-cp39-macosx_12_0_arm64.whl
 ```
 zipfile.BadZipFile: Bad CRC-32 for file 'tensorflow/python/_pywrap_tensorflow_internal.so'
 ```
+准备尝试将python3.9 降低到3.8, mac m1更新python3.8以后，需要修改环境变量，注意site-package的位置：/opt/homebrew/lib/python3.8/site-packages
 
 #### Errors  
 
