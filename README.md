@@ -30,6 +30,11 @@ python setup.py -q bdist_wheel
 pip install --no-deps dist/tensorflow_io-0.25.0-cp39-cp39-macosx_12_0_arm64.whl
 ```
 
+待解决，安装的时候报如下的错误
+```
+zipfile.BadZipFile: Bad CRC-32 for file 'tensorflow/python/_pywrap_tensorflow_internal.so'
+```
+
 #### Errors  
 
 1. `ERROR: xxx/external/local_config_cc/BUILD:48:19: in cc_toolchain_suite rule @local_config_cc//:toolchain: cc_toolchain_suite '@local_config_cc//:toolchain' does not contain a toolchain for cpu 'darwin_arm64'`
